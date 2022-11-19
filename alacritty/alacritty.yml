@@ -25,6 +25,7 @@ colors:
 
 
 window:
+  opacity: 0.9
   padding:
     x: 10
     y: 10
@@ -33,7 +34,7 @@ window:
   startup_mode: Windowed
 
   # Window decorations
-  decorations: full
+  decorations: Full
 
 
 dynamic_title: true
@@ -41,8 +42,7 @@ draw_bold_text_with_bright_colors: true
 live_config_reload: true
 
 key_bindings:
-  - { key: Q,        mods: Control,       action: Quit             }
-  - { key: F11,                           action: ToggleFullscreen }
-  - { key: Plus,     mods: Control,       action: IncreaseFontSize }
-  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
-  - { key: Period,       mods: Control,       action: ResetFontSize    }
+  - { key: F11,                   action: ToggleFullscreen }
+  - { key: Plus,   mods: Control, action: IncreaseFontSize }
+  - { key: Minus,  mods: Control, action: DecreaseFontSize }
+  - { key: Period, mods: Control, action: ResetFontSize    }
