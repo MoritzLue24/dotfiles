@@ -22,20 +22,19 @@ font:
 colors:
   primary:
     background: "#282828"
-
-
+x
 window:
-  opacity: 0.9
   padding:
     x: 10
     y: 10
+  
+  dimensions:
+    columns: 113
+    lines: 60
 
-  # Startup Mode
   startup_mode: Windowed
-
-  # Window decorations
   decorations: Full
-
+  opacity: 0.9
 
 dynamic_title: true
 draw_bold_text_with_bright_colors: true
