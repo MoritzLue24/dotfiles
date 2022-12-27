@@ -4,19 +4,8 @@ local function get_config(name)
 	return string.format('require("config/%s")', name)
 end
 
--- Packer path
-local packer_path = vim.fn.stdpath('config') .. '/site'
-vim.o.packpath = vim.o.packpath .. ',' .. packer_path
-
--- Initialize Packer
-local packer = require('packer')
-packer.init({
-	package_root = vim.fn.stdpath('config') .. '/site/pack',
-	compile_path = vim.fn.stdpath('config') .. '/plugin/packer_compiled.lua'
-})
-
 -- Install plugins
-packer.startup(function(use)
+require('packer').startup(function(use)
 	use('wbthomason/packer.nvim')
 	
 	-- File finder
@@ -31,7 +20,7 @@ packer.startup(function(use)
 	use{'iamcco/markdown-preview.nvim', run = 'cd app && npm install', setup = function() vim.g.mkdp_filetypes = {'markdown'} end, ft = {'markdown'}}
 	
 	-- Colorscheme
-    use{'ellisonleao/gruvbox.nvim'}
+    	use{'ellisonleao/gruvbox.nvim'}
 	-- Status line
 	use{'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, config = function() require('lualine').setup() end}
 	
