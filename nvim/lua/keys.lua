@@ -4,6 +4,7 @@ vim.g.mapleader = ","
 -- Coordination --
 ------------------
 
+vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>f', '<cmd>Telescope find_files<CR>')
 vim.keymap.set('n', '<leader>m', '<cmd>MarkdownPreview<CR>')
 vim.keymap.set('n', '<leader>+', '<cmd>horizontal resize +10<CR>')
