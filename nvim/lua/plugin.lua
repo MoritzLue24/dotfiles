@@ -4,12 +4,18 @@ local function get_config(name)
 	return string.format('require("config/%s")', name)
 end
 
+
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
+
 -- Install plugins
-require('packer').startup(function(use)
+return require('packer').startup(function(use)
 	use('wbthomason/packer.nvim')
 	
-	-- File finder
-	use{'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = get_config('telescope')}
+	-- File explorer
+	use{'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons', config = function() require('nvim-tree').setup() end}
+	-- File finder 
+	use{'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
 	-- Highlighting
 	use{'nvim-treesitter/nvim-treesitter', config = get_config('treesitter')}
 	-- Auto close pairs
