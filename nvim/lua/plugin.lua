@@ -31,7 +31,7 @@ return require('packer').startup(function(use)
 	use{'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, config = function() require('lualine').setup() end}
 	
 	-- LSP
-	use {
+	use{
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
 			-- LSP Support
@@ -53,5 +53,9 @@ return require('packer').startup(function(use)
 		},
 		config = get_config('lsp-zero')
 	}
+	
+	-- Debugging
+	use{'mfussenegger/nvim-dap', config = get_config('dap')}
+	use{'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end}
 
 end)
