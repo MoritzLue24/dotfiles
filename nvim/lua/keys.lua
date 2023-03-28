@@ -12,6 +12,16 @@ vim.keymap.set('n', '<leader>#', '<cmd>horizontal resize -10<CR>')
 vim.keymap.set('n', '<leader>.', '<cmd>vertical resize +10<CR>')
 vim.keymap.set('n', '<leader>-', '<cmd>vertical resize -10<CR>')
 
+---------------
+-- Debugging --
+---------------
+
+vim.keymap.set('n', '<F5>', '<cmd>DapContinue<CR>')
+vim.keymap.set('n', '<F10>', '<cmd>DapStepOver<CR>')
+vim.keymap.set('n', '<F11>', '<cmd>DapStepInto<CR>')
+vim.keymap.set('n', '<F12>', '<cmd>DapStepOut<CR>')
+vim.keymap.set('n', '<leader>b', '<cmd>DapToggleBreakpoint<CR>')
+
 ----------------------
 -- Code refactoring --
 ----------------------
@@ -24,4 +34,3 @@ vim.keymap.set('n', '<leader>-', '<cmd>vertical resize -10<CR>')
 -- vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
 -- vim.keymap.set("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
 -- vim.keymap.set("n", "<leader>d", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
-
