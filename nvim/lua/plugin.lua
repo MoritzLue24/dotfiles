@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
 	-- File explorer
 	use{'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons', config = function() require('nvim-tree').setup() end}
 	-- File finder 
-	use{'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
+	use{'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = get_config('telescope')}
 	-- Highlighting
 	use{'nvim-treesitter/nvim-treesitter', config = get_config('treesitter')}
 	-- Auto close pairs
@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 	use{'iamcco/markdown-preview.nvim', run = 'cd app && npm install', setup = function() vim.g.mkdp_filetypes = {'markdown'} end, ft = {'markdown'}}
 	
 	-- Colorscheme
-    	use{'ellisonleao/gruvbox.nvim'}
+    use{'ellisonleao/gruvbox.nvim'}
 	-- Status line
 	use{'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, config = function() require('lualine').setup() end}
 	
@@ -58,4 +58,4 @@ return require('packer').startup(function(use)
 	use{'mfussenegger/nvim-dap', config = get_config('dap')}
 	use{'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end}
 
-end)
+e
