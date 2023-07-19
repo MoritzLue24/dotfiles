@@ -1,27 +1,28 @@
-working_directory: "C:\\"
-
 font:
   normal:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
     style: Medium
 
   bold:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
     style: Bold Italic
   size: 10.0
+  offset:
+    x: 0
+    y: 4
 
 
 colors:
   primary:
-    background: "#282828"
+    background: "#1c1c1c"
 
 window:
   padding:
@@ -29,12 +30,12 @@ window:
     y: 10
   
   dimensions:
-    columns: 113
-    lines: 60
+    columns: 120
+    lines: 20
 
   startup_mode: Windowed
   decorations: Full
-  opacity: 0.9
+  opacity: 0.95
 
 dynamic_title: true
 draw_bold_text_with_bright_colors: true
