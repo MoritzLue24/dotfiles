@@ -29,11 +29,22 @@ lsp.set_preferences({ sign_icons = {} })
 lsp.setup_nvim_cmp({ mapping = cmp_mappings })
 lsp.on_attach(on_attach)
 
+local lsp_config = require("lspconfig")
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-require("lspconfig").clangd.setup {
+local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+lsp_config.clangd.setup {
     capabilities = capabilities,
-    on_attach = on_attach
+    on_attach = on_attach,
+}
+
+lsp_config.tsserver.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    init_options = {
+        preferences = {
+            disableSuggestions = true,
+        }
+    }
 }
 
 lsp.setup()
