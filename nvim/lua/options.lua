@@ -11,4 +11,3 @@ vim.opt.tabstop = 4
 
 -- Clipboard
 vim.opt.clipboard = 'unnamedplus'
-
