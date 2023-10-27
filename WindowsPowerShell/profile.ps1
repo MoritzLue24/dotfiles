@@ -11,21 +11,23 @@ function Get-BranchName() {
 }
 
 function Prompt {
-	# User
-	Write-Host -NoNewLine $curUser -ForegroundColor Green
+    $curDir = (Convert-Path .)
+
+    if ($curDir.Contains($HOME)) {
+        $curDir = $curDir.Replace($HOME, "~")
+    }
+
+	Write-Host -NoNewLine $curUser -ForegroundColor Cyan
 	Write-Host -NoNewLine "@" -ForegroundColor White
 	
-	# Location
-	$p = Get-Location
 	Write-Host -NoNewLine "(" -ForegroundColor DarkGray
-	Write-Host -NoNewLine $p -ForegroundColor Red
+	Write-Host -NoNewLine $curDir -ForegroundColor DarkGreen
 	Write-Host -NoNewLine ")" -ForegroundColor DarkGray
 
-	# Branch
 	$branch = Get-BranchName
-	Write-Host -NoNewLine " [" -ForegroundColor DarkGray
+	Write-Host -NoNewLine " (" -ForegroundColor DarkGray
 	Write-Host -NoNewLine $branch -ForegroundColor Blue
-	Write-Host -NoNewLine "]" -ForegroundColor DarkGray
+	Write-Host -NoNewLine ")" -ForegroundColor DarkGray
 
   	Write-Host -NoNewLine " >"
 	return " "
