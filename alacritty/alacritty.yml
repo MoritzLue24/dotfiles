@@ -1,48 +1,54 @@
+working_directory: "C:\\Users\\molue\\"
+
 font:
+  size: 13.0
+  offset:
+    x: 0
+    y: 0
+
   normal:
-    family: JetBrainsMono Nerd Font
-    style: Medium
+    family: Consolas
+    style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: Consolas
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: Consolas
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: Consolas
     style: Bold Italic
-  size: 10.0
-  offset:
-    x: 0
-    y: 4
+  
 
-
-colors:
-  primary:
-    background: "#1c1c1c"
+# colors:
+  # primary:
+    # background: "#1c1c1c"
+    # background: "#000000"
 
 window:
-  padding:
-    x: 10
-    y: 10
+  # padding:
+    # x: 10
+    # y: 10
   
   dimensions:
     columns: 120
     lines: 20
+    # columns: 113
+    # lines: 60
 
   startup_mode: Windowed
   decorations: Full
-  opacity: 0.95
+  opacity: 0.90
 
 dynamic_title: true
 draw_bold_text_with_bright_colors: true
 live_config_reload: true
 
 key_bindings:
-  # - { key: F11,                   action: ToggleFullscreen }
+  - { key: F2,                    action: ToggleFullscreen }
   - { key: Plus,   mods: Control, action: IncreaseFontSize }
   - { key: Minus,  mods: Control, action: DecreaseFontSize }
   - { key: Period, mods: Control, action: ResetFontSize    }
